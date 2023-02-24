@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Scene from "./Scene";
 import Player from "./Player";
 import FullscreenButton from "./FullscreenButton";
 
 const Game = () => {
+
     const [playerLocation, setPlayerLocation] = useState({ x: 100, y: 500});
     const [sceneNumber, setSceneNumber] = useState(0)
     
@@ -51,7 +51,7 @@ const Game = () => {
 
     return (
         <div id="game" ref={gameRef}>
-        <Player location={playerLocation}/>
+        <Player location={playerLocation}></Player>
         <FullscreenButton/>
         <Scene background="steelblue"></Scene>
         <Scene background="lightgreen"></Scene>
